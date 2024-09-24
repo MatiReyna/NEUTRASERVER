@@ -1,9 +1,11 @@
 import express from 'express';
 import { Request, Response, NextFunction } from 'express';
+import morgan from 'morgan';
 
 const server = express();
 
 server.use(express.json());
+server.use(morgan('dev'));
 
 server.use((_req:Request, res:Response, next) => {
     res.header('Access-Control-Allow-Origin', '*');

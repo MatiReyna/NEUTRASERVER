@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 function startServer() {
     try {
@@ -11,7 +11,7 @@ function startServer() {
             console.log(`Server raised in port: ${PORT}`)
         });
     } catch (error) {
-        console.log(error)
+        console.error(`Error starting the server on port ${PORT}:`, error);
     }
 };
 
