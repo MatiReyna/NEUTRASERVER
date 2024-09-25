@@ -23,7 +23,7 @@ Product.init({
     },
     stock: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false  // Comentario
     }
 }, { sequelize, modelName: 'Product' });
 
