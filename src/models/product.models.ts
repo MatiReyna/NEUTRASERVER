@@ -7,7 +7,7 @@ class Product extends Model {
     public description!: string;
     public price!: number;
     public image!: string;
-}
+};
 
 Product.init({
     id: {
