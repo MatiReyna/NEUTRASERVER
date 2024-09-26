@@ -1,7 +1,13 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 
-class Product extends Model {}
+class Product extends Model {
+    public id!: number;
+    public name!: string;
+    public description!: string;
+    public price!: number;
+    public image!: string;
+}
 
 Product.init({
     id: {
@@ -21,10 +27,10 @@ Product.init({
         type: DataTypes.FLOAT,
         allowNull: false
     },
-    stock: {
-        type: DataTypes.INTEGER,
-        allowNull: false  // Comentario
+    image: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
-}, { sequelize, modelName: 'Product' });
+}, { sequelize, modelName: 'Product', timestamps: true });
 
 export default Product;
