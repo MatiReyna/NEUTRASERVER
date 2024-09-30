@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
-      "target": "ES6",
-      "module": "CommonJS",
-      "outDir": "./dist",
+      "target": "ES6",  // Versión de ECMAScript que quieres soportar.
+      "module": "CommonJS",  // Módulos para Node.JS.
+      "outDir": "./dist",  // Directorio de salida para los archivos compilados.
       "strict": false,
-      "esModuleInterop": true
+      "esModuleInterop": true  // Permite la interoperabilidad con módulos ES6.
     },
     // "include": ["src/*/.ts", "*.ts"]
+    "exclude": ["node_modules"]  // Excluye la carpeta node_modules.
 }

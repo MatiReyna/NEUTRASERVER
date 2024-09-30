@@ -1,7 +1,10 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 
-class Size extends Model {};
+class Size extends Model {
+    public id!: number;
+    public size!: string;
+};
 
 Size.init({
     id: {
