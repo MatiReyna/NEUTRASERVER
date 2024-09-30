@@ -2,7 +2,7 @@ import express from 'express';
 import { Request, Response, NextFunction } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import routes from './routes/index.router';
+import routes from './routes/index.routes';
 
 const server = express();
 
