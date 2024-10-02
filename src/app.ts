@@ -16,7 +16,7 @@ server.use(cors({
     allowedHeaders: [ 'Origin', 'X-Requested-With', 'Content-Type', 'Accept' ]
 }));
 
-server.use('/', routes);
+server.use('/byneutra', routes);
 
 server.use((err: Error, _req:Request, res:Response, _next:NextFunction) => {
     console.error(err.stack);

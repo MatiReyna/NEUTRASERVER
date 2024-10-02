@@ -12,9 +12,9 @@ export const getAllColor = async (_req: Request, res: Response) => {
 
 export const createColor = async (req: Request, res: Response) => {
     try {
-        const { name } = req.body;
+        const { color } = req.body;
 
-        const newColor = await Color.create({ name });
+        const newColor = await Color.create({ color });
         return res.status(201).json(newColor);
     } catch (error) {
         return res.status(500).json({ error: 'Error al crear el color' });
